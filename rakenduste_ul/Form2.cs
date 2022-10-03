@@ -32,46 +32,46 @@ namespace rakenduste_ul
         int divisor;
 
         //создаем таймер для нашего quiz
-        int timeLeft;
+        int AegVeel;
         private void InitializeComponent()//функция из которой запускается/работает программа
         {
             components = new Container();
-            timeLabel = new Label();
+            AegLabel = new Label();
             label1 = new Label();
-            plusLeftLabel = new Label();
+            plusVasakLabel = new Label();
             label2 = new Label();
-            plusRightLabel = new Label();
+            plusParemLabel = new Label();
             label4 = new Label();
             sum = new NumericUpDown();
-            difference = new NumericUpDown();
+            erinevus = new NumericUpDown();
             label = new Label();
-            differenceRightLabel = new Label();
+            erinevusParemLabel = new Label();
             label6 = new Label();
-            differenceLeftLabel = new Label();
-            product = new NumericUpDown();
+            erinevusVasakLabel = new Label();
+            tood = new NumericUpDown();
             mult = new Label();
-            productRightLabel = new Label();
+            toodParemLabel = new Label();
             label10 = new Label();
-            productLeftLabel = new Label();
-            quotient = new NumericUpDown();
+            toodVasakLabel = new Label();
+            jagatis = new NumericUpDown();
             div = new Label();
-            quotientRightLabel = new Label();
+            jagatisParemLabel = new Label();
             label14 = new Label();
-            quotientLeftLabel = new Label();
-            startButton = new Button();
+            jagatisVasakLabel = new Label();
+            startNupp = new Button();
             timer1 = new Timer(this.components);
-            showDate = new Label();
+            NaitaDate = new Label();
             
             // 
             // timeLabel
             // 
-            timeLabel.BorderStyle = BorderStyle.FixedSingle;
-            timeLabel.Font = new Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular);
-            timeLabel.Location = new Point(272, 3);
-            timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(200, 30);
-            timeLabel.TabIndex = 0;
-            timeLabel.Click += new EventHandler(this.timeLabel_Click);
+            AegLabel.BorderStyle = BorderStyle.FixedSingle;
+            AegLabel.Font = new Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular);
+            AegLabel.Location = new Point(272, 3);
+            AegLabel.Name = "timeLabel";
+            AegLabel.Size = new Size(200, 30);
+            AegLabel.TabIndex = 0;
+            AegLabel.Click += new EventHandler(this.AegLabel_Click);
             // 
             // label1
             // 
@@ -81,17 +81,17 @@ namespace rakenduste_ul
             label1.Name = "label1";
             label1.Size = new Size(101, 25);
             label1.TabIndex = 1;
-            label1.Text = "Time Left";
+            label1.Text = "Aeg veel";
             // 
-            // plusLeftLabel
+            // plusVasakLabel
             // 
-            plusLeftLabel.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
-            plusLeftLabel.Location = new Point(50, 75);
-            plusLeftLabel.Name = "plusLeftLabel";
-            plusLeftLabel.Size = new Size(60, 50);
-            plusLeftLabel.TabIndex = 2;
-            plusLeftLabel.Text = "?";
-            plusLeftLabel.TextAlign = ContentAlignment.MiddleCenter;
+            plusVasakLabel.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
+            plusVasakLabel.Location = new Point(50, 75);
+            plusVasakLabel.Name = "plusVasakLabel";
+            plusVasakLabel.Size = new Size(60, 50);
+            plusVasakLabel.TabIndex = 2;
+            plusVasakLabel.Text = "?";
+            plusVasakLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -103,20 +103,20 @@ namespace rakenduste_ul
             label2.Text = "=";
             label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // plusRightLabel
+            // plusParemLabel
             // 
-            plusRightLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
-            plusRightLabel.Location = new Point(182, 75);
-            plusRightLabel.Name = "plusRightLabel";
-            plusRightLabel.Size = new Size(60, 50);
-            plusRightLabel.TabIndex = 4;
-            plusRightLabel.Text = "?";
-            plusRightLabel.TextAlign = ContentAlignment.MiddleCenter;
-            plusRightLabel.Click += new EventHandler(this.label3_Click);
+            plusParemLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
+            plusParemLabel.Location = new Point(182, 75);
+            plusParemLabel.Name = "plusParemLabel";
+            plusParemLabel.Size = new Size(60, 50);
+            plusParemLabel.TabIndex = 4;
+            plusParemLabel.Text = "?";
+            plusParemLabel.TextAlign = ContentAlignment.MiddleCenter;
+            plusParemLabel.Click += new EventHandler(this.label3_Click);
             // 
             // label4
             // 
-            label4.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
+            label4.Font = new Font("Microsoft Sans Serif", 18F,System.Drawing.FontStyle.Regular);
             label4.Location = new Point(116, 75);
             label4.Name = "label4";
             label4.Size = new Size(60, 50);
@@ -127,7 +127,7 @@ namespace rakenduste_ul
             // 
             // sum
             // 
-            sum.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
+            sum.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
             sum.Location = new Point(314, 90);
             sum.Name = "sum";
             sum.Size = new Size(100, 35);
@@ -135,19 +135,19 @@ namespace rakenduste_ul
             sum.ValueChanged += new EventHandler(this.Correct_Answer);
             sum.Enter += new EventHandler(this.answer_Enter);
             // 
-            // difference
+            // erinevus
             // 
-            difference.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
-            difference.Location = new Point(314, 140);
-            difference.Name = "difference";
-            difference.Size = new Size(100, 35);
-            difference.TabIndex = 3;
-            difference.ValueChanged += new EventHandler(this.Correct_Answer);
-            difference.Enter += new EventHandler(this.answer_Enter);
+            erinevus.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
+            erinevus.Location = new Point(314, 140);
+            erinevus.Name = "erinevus";
+            erinevus.Size = new Size(100, 35);
+            erinevus.TabIndex = 3;
+            erinevus.ValueChanged += new EventHandler(this.Correct_Answer);
+            erinevus.Enter += new EventHandler(this.answer_Enter);
             // 
             // label
             // 
-            label.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
+            label.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
             label.Location = new Point(116, 125);
             label.Name = "label";
             label.Size = new Size(60, 50);
@@ -155,19 +155,19 @@ namespace rakenduste_ul
             label.Text = "-";
             label.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // differenceRightLabel
+            // erinevusParemLabel
             // 
-            differenceRightLabel.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
-            differenceRightLabel.Location = new Point(182, 125);
-            differenceRightLabel.Name = "differenceRightLabel";
-            differenceRightLabel.Size = new Size(60, 50);
-            differenceRightLabel.TabIndex = 9;
-            differenceRightLabel.Text = "?";
-            differenceRightLabel.TextAlign = ContentAlignment.MiddleCenter;
+            erinevusParemLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
+            erinevusParemLabel.Location = new Point(182, 125);
+            erinevusParemLabel.Name = "erinevusParemLabel";
+            erinevusParemLabel.Size = new Size(60, 50);
+            erinevusParemLabel.TabIndex = 9;
+            erinevusParemLabel.Text = "?";
+            erinevusParemLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            label6.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
+            label6.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
             label6.Location = new Point(248, 125);
             label6.Name = "label6";
             label6.Size = new Size(60, 50);
@@ -175,29 +175,29 @@ namespace rakenduste_ul
             label6.Text = "=";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // differenceLeftLabel
+            // erinevusVasakLabel
             // 
-            differenceLeftLabel.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
-            differenceLeftLabel.Location = new Point(50, 125);
-            differenceLeftLabel.Name = "differenceLeftLabel";
-            differenceLeftLabel.Size = new Size(60, 50);
-            differenceLeftLabel.TabIndex = 7;
-            differenceLeftLabel.Text = "?";
-            differenceLeftLabel.TextAlign = ContentAlignment.MiddleCenter;
+            erinevusVasakLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
+            erinevusVasakLabel.Location = new Point(50, 125);
+            erinevusVasakLabel.Name = "erinevusVasakLabel";
+            erinevusVasakLabel.Size = new Size(60, 50);
+            erinevusVasakLabel.TabIndex = 7;
+            erinevusVasakLabel.Text = "?";
+            erinevusVasakLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // product
+            // tood
             // 
-            product.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
-            product.Location = new Point(314, 190);
-            product.Name = "product";
-            product.Size = new Size(100, 35);
-            product.TabIndex = 4;
-            product.ValueChanged += new EventHandler(this.Correct_Answer);
-            product.Enter += new EventHandler(this.answer_Enter);
+            tood.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
+            tood.Location = new Point(314, 190);
+            tood.Name = "tood";
+            tood.Size = new Size(100, 35);
+            tood.TabIndex = 4;
+            tood.ValueChanged += new EventHandler(this.Correct_Answer);
+            tood.Enter += new EventHandler(this.answer_Enter);
             // 
             // mult
             // 
-            mult.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
+            mult.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
             mult.Location = new Point(116, 175);
             mult.Name = "mult";
             mult.Size = new Size(60, 50);
@@ -205,19 +205,19 @@ namespace rakenduste_ul
             mult.Text = "*";
             mult.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // productRightLabel
+            // toodParemLabel
             // 
-            productRightLabel.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
-            productRightLabel.Location = new Point(182, 175);
-            productRightLabel.Name = "productRightLabel";
-            productRightLabel.Size = new Size(60, 50);
-            productRightLabel.TabIndex = 14;
-            productRightLabel.Text = "?";
-            productRightLabel.TextAlign = ContentAlignment.MiddleCenter;
+            toodParemLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
+            toodParemLabel.Location = new Point(182, 175);
+            toodParemLabel.Name = "toodParemLabel";
+            toodParemLabel.Size = new Size(60, 50);
+            toodParemLabel.TabIndex = 14;
+            toodParemLabel.Text = "?";
+            toodParemLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
-            label10.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
+            label10.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
             label10.Location = new Point(248, 175);
             label10.Name = "label10";
             label10.Size = new Size(60, 50);
@@ -225,29 +225,29 @@ namespace rakenduste_ul
             label10.Text = "=";
             label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // productLeftLabel
+            // toodVasakLabel
             // 
-            productLeftLabel.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
-            productLeftLabel.Location = new Point(50, 175);
-            productLeftLabel.Name = "productLeftLabel";
-            productLeftLabel.Size = new Size(60, 50);
-            productLeftLabel.TabIndex = 12;
-            productLeftLabel.Text = "?";
-            productLeftLabel.TextAlign = ContentAlignment.MiddleCenter;
+            toodVasakLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
+            toodVasakLabel.Location = new Point(50, 175);
+            toodVasakLabel.Name = "toodVasakLabel";
+            toodVasakLabel.Size = new Size(60, 50);
+            toodVasakLabel.TabIndex = 12;
+            toodVasakLabel.Text = "?";
+            toodVasakLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // quotient
+            // jagatis
             // 
-            quotient.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
-            quotient.Location = new Point(314, 240);
-            quotient.Name = "quotient";
-            quotient.Size = new Size(100, 35);
-            quotient.TabIndex = 5;
-            quotient.ValueChanged += new EventHandler(this.Correct_Answer);
-            quotient.Enter += new EventHandler(this.answer_Enter);
+            jagatis.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
+            jagatis.Location = new Point(314, 240);
+            jagatis.Name = "jagatis";
+            jagatis.Size = new Size(100, 35);
+            jagatis.TabIndex = 5;
+            jagatis.ValueChanged += new EventHandler(this.Correct_Answer);
+            jagatis.Enter += new EventHandler(this.answer_Enter);
             // 
             // div
             // 
-            div.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
+            div.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
             div.Location = new Point(116, 225);
             div.Name = "div";
             div.Size = new Size(60, 50);
@@ -255,19 +255,19 @@ namespace rakenduste_ul
             div.Text = "/";
             div.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // quotientRightLabel
+            // jagatisParemLabel
             // 
-            quotientRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
-            quotientRightLabel.Location = new Point(182, 225);
-            quotientRightLabel.Name = "quotientRightLabel";
-            quotientRightLabel.Size = new Size(60, 50);
-            quotientRightLabel.TabIndex = 19;
-            quotientRightLabel.Text = "?";
-            quotientRightLabel.TextAlign = ContentAlignment.MiddleCenter;
+            jagatisParemLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
+            jagatisParemLabel.Location = new Point(182, 225);
+            jagatisParemLabel.Name = "jagatisParemLabel";
+            jagatisParemLabel.Size = new Size(60, 50);
+            jagatisParemLabel.TabIndex = 19;
+            jagatisParemLabel.Text = "?";
+            jagatisParemLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
-            label14.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
+            label14.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
             label14.Location = new Point(248, 225);
             label14.Name = "label14";
             label14.Size = new Size(60, 50);
@@ -275,27 +275,27 @@ namespace rakenduste_ul
             label14.Text = "=";
             label14.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // quotientLeftLabel
+            // jagatisVasakLabel
             // 
-            quotientLeftLabel.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
-            quotientLeftLabel.Location = new Point(50, 225);
-            quotientLeftLabel.Name = "quotientLeftLabel";
-            quotientLeftLabel.Size = new Size(60, 50);
-            quotientLeftLabel.TabIndex = 17;
-            quotientLeftLabel.Text = "?";
-            quotientLeftLabel.TextAlign = ContentAlignment.MiddleCenter;
+            jagatisVasakLabel.Font = new Font("Microsoft Sans Serif", 18F,FontStyle.Regular);
+            jagatisVasakLabel.Location = new Point(50, 225);
+            jagatisVasakLabel.Name = "jagatisVasakLabel";
+            jagatisVasakLabel.Size = new Size(60, 50);
+            jagatisVasakLabel.TabIndex = 17;
+            jagatisVasakLabel.Text = "?";
+            jagatisVasakLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // startButton
             // 
-            startButton.AutoSize = true;
-            startButton.Font = new Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular);
-            startButton.Location = new Point(157, 302);
-            startButton.Name = "startButton";
-            startButton.Size = new Size(127, 34);
-            startButton.TabIndex = 1;
-            startButton.Text = "Start the quiz";
-            startButton.UseVisualStyleBackColor = true;
-            startButton.Click += new EventHandler(this.startButton_Click);
+            startNupp.AutoSize = true;
+            startNupp.Font = new Font("Microsoft Sans Serif", 14F,FontStyle.Regular);
+            startNupp.Location = new Point(157, 302);
+            startNupp.Name = "startButton";
+            startNupp.Size = new Size(127, 34);
+            startNupp.TabIndex = 1;
+            startNupp.Text = "Start the quiz";
+            startNupp.UseVisualStyleBackColor = true;
+            startNupp.Click += new EventHandler(this.startButton_Click);
             // 
             // timer1
             // 
@@ -304,39 +304,39 @@ namespace rakenduste_ul
             // 
             // showDate
             // 
-            showDate.AutoSize = true;
-            showDate.Location = new Point(360, 320);
-            showDate.Name = "showDate";
-            showDate.Size = new Size(0, 13);
-            showDate.TabIndex = 21;
+            NaitaDate.AutoSize = true;
+            NaitaDate.Location = new Point(360, 320);
+            NaitaDate.Name = "showDate";
+            NaitaDate.Size = new Size(0, 13);
+            NaitaDate.TabIndex = 21;
             // 
             // Form1
             // 
             ClientSize = new Size(484, 361);
-            Controls.Add(showDate);
-            Controls.Add(startButton);
-            Controls.Add(quotient);
+            Controls.Add(NaitaDate);
+            Controls.Add(startNupp);
+            Controls.Add(jagatis);
             Controls.Add(div);
-            Controls.Add(quotientRightLabel);
+            Controls.Add(jagatisParemLabel);
             Controls.Add(label14);
-            Controls.Add(quotientLeftLabel);
-            Controls.Add(product);
+            Controls.Add(jagatisVasakLabel);
+            Controls.Add(tood);
             Controls.Add(mult);
-            Controls.Add(productRightLabel);
+            Controls.Add(toodParemLabel);
             Controls.Add(label10);
-            Controls.Add(productLeftLabel);
-            Controls.Add(difference);
+            Controls.Add(toodVasakLabel);
+            Controls.Add(erinevus);
             Controls.Add(label);
-            Controls.Add(differenceRightLabel);
+            Controls.Add(erinevusParemLabel);
             Controls.Add(label6);
-            Controls.Add(differenceLeftLabel);
+            Controls.Add(erinevusVasakLabel);
             Controls.Add(sum);
             Controls.Add(label4);
-            Controls.Add(plusRightLabel);
+            Controls.Add(plusParemLabel);
             Controls.Add(label2);
-            Controls.Add(plusLeftLabel);
+            Controls.Add(plusVasakLabel);
             Controls.Add(label1);
-            Controls.Add(timeLabel);
+            Controls.Add(AegLabel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
 
             MaximizeBox = false;
@@ -346,65 +346,65 @@ namespace rakenduste_ul
 
         
 
-        //add a method called StartTheQuiz()
+        
 
         public void StartTheQuiz()
         {
-            //fill the addition problem with random numbers and store them in the variables
+            //заполняем задачу сложения случайными числами и сохраняем их в переменных
             addend1 = randomizer.Next(51);
             addend2 = randomizer.Next(51);
 
-            //convert random numbers into strings for the addition problem
-            plusLeftLabel.Text = addend1.ToString();
-            plusRightLabel.Text = addend2.ToString();
+            //конвертирует случайные числа в "string" для будущих задач
+            plusVasakLabel.Text = addend1.ToString();
+            plusParemLabel.Text = addend2.ToString();
 
-            //check if sum is 0 before adding values.
+            //проверяет равна ли сумма нулю перед тем как добовлять знаяения
             sum.Value = 0;
 
-            //fill the subtraction problem
+            //создает задачу на вычитание
             diffend1 = randomizer.Next(1, 101);
             diffend2 = randomizer.Next(1, diffend1);
 
-            //convert the values to strings
-            differenceLeftLabel.Text = diffend1.ToString();
-            differenceRightLabel.Text = diffend2.ToString();
-            difference.Value = 0;
+            //преобразовывет значения в "string"
+            erinevusVasakLabel.Text = diffend1.ToString();
+            erinevusParemLabel.Text = diffend2.ToString();
+            erinevus.Value = 0;
 
-            //generate and fill the product problem
+            //генерирует задачу на умножение
             multiplicand = randomizer.Next(2, 11);
             multiplier = randomizer.Next(2, 11);
 
-            //convert to string
-            productLeftLabel.Text = multiplicand.ToString();
-            productRightLabel.Text = multiplier.ToString();
-            product.Value = 0;
+            //эти строки конвертируют в "string"
+            toodVasakLabel.Text = multiplicand.ToString();
+            toodParemLabel.Text = multiplier.ToString();
+            tood.Value = 0;
 
-            //generate and fill the division problem
+            //генерирует задачу на деление
             divisor = randomizer.Next(2, 11);
-            int temporayQuotient = randomizer.Next(2, 11);
-            dividend = divisor * temporayQuotient;
+            int temporayjagatis = randomizer.Next(2, 11);
+            dividend = divisor * temporayjagatis;
 
-            //convert to string
-            quotientLeftLabel.Text = dividend.ToString();
-            quotientRightLabel.Text = divisor.ToString();
+            //эти строки конвертируют в тип "string"
+            jagatisVasakLabel.Text = dividend.ToString();
+            jagatisParemLabel.Text = divisor.ToString();
 
-            //check if quotient is 0
-            quotient.Value = 0;
-
-
+            //проверяет равна ли jagatis нулю
+            jagatis.Value = 0;
 
 
-            //start the timer
-            timeLeft = 30;
-            timeLabel.Text = "30 seconds";
+
+
+            //эти строки запускают таймер
+            AegVeel = 30;
+            AegLabel.Text = "30 sekundid";
             timer1.Start();
         }
-        //check the answer to see if correct
+        //функция проверяет правильность введеных ответов
         private bool CheckTheAnswer()
         {
-            if ((addend1 + addend2 == sum.Value) && (diffend1 - diffend2 == difference.Value)
-                && (multiplicand * multiplier == product.Value)
-                && (dividend / divisor == quotient.Value)
+            if ((addend1 + addend2 == sum.Value) && (diffend1 - diffend2 == erinevus.Value)
+                && (multiplicand * multiplier == tood.Value)
+                && (dividend / divisor == jagatis.Value)
                 )
 
                 return true;
@@ -416,7 +416,7 @@ namespace rakenduste_ul
         {
             InitializeComponent();
         }
-        private void timeLabel_Click(object sender, EventArgs e)
+        private void AegLabel_Click(object sender, EventArgs e)
         {
 
         }
@@ -431,49 +431,49 @@ namespace rakenduste_ul
         private void startButton_Click(object sender, EventArgs e)
         {
             StartTheQuiz();
-            startButton.Enabled = false;
+            startNupp.Enabled = false;
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //if CheckTheAnswer returns true, stop the timer and congratulate the user with a message.
+            //Если функция "CheckTheAnswer" вернет true то остановит таймер и поздравит пользователя сообщением
 
             if (CheckTheAnswer())
             {
                 timer1.Stop();
                 MessageBox.Show("You got all the answers correct. Congratulations!");
-                startButton.Enabled = true;
+                startNupp.Enabled = true;
             }
 
-            if (timeLeft == 5)
+            if (AegVeel == 5)
             {
-                timeLabel.BackColor = Color.Red;
-                timeLeft = timeLeft - 1;
-                timeLabel.Text = timeLeft + " seconds";
+                AegLabel.BackColor = Color.Red;
+                AegVeel = AegVeel - 1;
+                AegLabel.Text = AegVeel + " seconds";
 
             }
 
 
 
-            else if (timeLeft > 0)
+            else if (AegVeel > 0)
             {
 
-                timeLeft = timeLeft - 1;
-                timeLabel.Text = timeLeft + " seconds";
+                AegVeel = AegVeel - 1;
+                AegLabel.Text = AegVeel + " sekundid";
             }
 
             else
             {
-                //stop time, and show a message if time runs out
+                //Функция Останавливает время и оповещает о том что время вышло
                 timer1.Stop();
-                timeLabel.Text = "Time is up!";
-                MessageBox.Show("You didn't finish in time.", "Sorry!");
+                AegLabel.Text = "pole enam aega!";
+                MessageBox.Show("Sa ei lõpetanud õigeks ajaks.", "Vabandust!");
 
                 sum.Value = addend1 + addend2;
-                difference.Value = diffend1 - diffend2;
-                product.Value = multiplicand * multiplier;
-                quotient.Value = dividend / divisor;
-                startButton.Enabled = true;
-                timeLabel.BackColor = Form2.DefaultBackColor;
+                erinevus.Value = diffend1 - diffend2;
+                tood.Value = multiplicand * multiplier;
+                jagatis.Value = dividend / divisor;
+                startNupp.Enabled = true;
+                AegLabel.BackColor = Form2.DefaultBackColor;
             }
 
 
@@ -481,7 +481,7 @@ namespace rakenduste_ul
         }
         private void answer_Enter(object sender, EventArgs e)
         {
-            //Select the whole answer in the NumericUpDown control
+            //выбирает ответ целиком в элементе "NumeriUpDown"
             NumericUpDown answerBox = sender as NumericUpDown;
             if (answerBox != null)
             {
@@ -489,7 +489,7 @@ namespace rakenduste_ul
                 answerBox.Select(0, lengthOfAnswer);
             }
         }
-        //alert user when correct answer is entered
+        //Функция оповещает пользователя если введен правильный ответ на все пропуски
         private void Correct_Answer(object sender, EventArgs e)
         {
             if (addend1 + addend2 == sum.Value)
@@ -499,30 +499,30 @@ namespace rakenduste_ul
         }
         
 
-        private Label timeLabel;
+        private Label AegLabel;
         private Label label1;
-        private Label plusLeftLabel;
+        private Label plusVasakLabel;
         private Label label2;
-        private Label plusRightLabel;
+        private Label plusParemLabel;
         private Label label4;
         private NumericUpDown sum;
-        private NumericUpDown difference;
+        private NumericUpDown erinevus;
         private Label label;
-        private Label differenceRightLabel;
+        private Label erinevusParemLabel;
         private Label label6;
-        private Label differenceLeftLabel;
-        private NumericUpDown product;
+        private Label erinevusVasakLabel;
+        private NumericUpDown tood;
         private Label mult;
-        private Label productRightLabel;
+        private Label toodParemLabel;
         private Label label10;
-        private Label productLeftLabel;
-        private NumericUpDown quotient;
+        private Label toodVasakLabel;
+        private NumericUpDown jagatis;
         private Label div;
-        private Label quotientRightLabel;
+        private Label jagatisParemLabel;
         private Label label14;
-        private Label quotientLeftLabel;
-        private Button startButton;
+        private Label jagatisVasakLabel;
+        private Button startNupp;
         private Timer timer1;
-        private Label showDate;
+        private Label NaitaDate;
     }
 }
