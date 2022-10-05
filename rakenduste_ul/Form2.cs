@@ -440,7 +440,7 @@ namespace rakenduste_ul
             if (CheckTheAnswer())
             {
                 timer1.Stop();
-                MessageBox.Show("You got all the answers correct. Congratulations!");
+                MessageBox.Show("Sa said kõik vastused õiged. Palju õnne!");
                 startNupp.Enabled = true;
             }
 
@@ -448,7 +448,7 @@ namespace rakenduste_ul
             {
                 AegLabel.BackColor = Color.Red;
                 AegVeel = AegVeel - 1;
-                AegLabel.Text = AegVeel + " seconds";
+                AegLabel.Text = AegVeel + " selundid";
 
             }
 
