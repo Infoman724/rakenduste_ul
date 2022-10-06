@@ -145,7 +145,7 @@ namespace rakenduste_ul
             ClientSize = new Size(800, 450);
             Controls.Add(this.tableLayoutPanel1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "PildiVaatamineApp";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -203,3 +203,7 @@ namespace rakenduste_ul
 
     }
 }
+
+//1-можно попробовать реализовать возможность просмотра видео?) / võite proovida rakendada video vaatamise võimalust)
+//2-думаем 
+//3-думаем
