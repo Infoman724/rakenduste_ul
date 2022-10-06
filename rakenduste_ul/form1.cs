@@ -96,58 +96,58 @@ namespace rakenduste_ul
             // puhasta
             // 
 
-            this.puhasta.AutoSize = true;
-            this.puhasta.Location = new Point(505, 3);
-            this.puhasta.Name = "puhasta";
-            this.puhasta.Size = new Size(85, 26);
-            this.puhasta.TabIndex = 1;
-            this.puhasta.Text = "puhasta pilt";
-            this.puhasta.UseVisualStyleBackColor = true;
-            this.puhasta.Click += new EventHandler(this.puhasta_Click);
+            puhasta.AutoSize = true;
+            puhasta.Location = new Point(505, 3);
+            puhasta.Name = "puhasta";
+            puhasta.Size = new Size(85, 26);
+            puhasta.TabIndex = 1;
+            puhasta.Text = "puhasta pilt";
+            puhasta.UseVisualStyleBackColor = true;
+            puhasta.Click += new EventHandler(this.puhasta_Click);
 
             // 
             // taustvarv
             // 
 
-            this.taustvarv.AutoSize = true;
-            this.taustvarv.Location = new Point(363, 3);
-            this.taustvarv.Name = "taustvarv";
-            this.taustvarv.Size = new Size(136, 26);
-            this.taustvarv.Text = "Määrake taustavärv";
-            this.taustvarv.Click += new EventHandler(this.taustvarv_Click);
+            taustvarv.AutoSize = true;
+            taustvarv.Location = new Point(363, 3);
+            taustvarv.Name = "taustvarv";
+            taustvarv.Size = new Size(136, 26);
+            taustvarv.Text = "Määrake taustavärv";
+            taustvarv.Click += new EventHandler(this.taustvarv_Click);
 
             // 
             // sulgeNupp
             // 
 
-            this.sulgeNupp.AutoSize = true;
-            this.sulgeNupp.Location = new Point(282, 3);
-            this.sulgeNupp.Name = "sulgeNupp";
-            this.sulgeNupp.Size = new Size(75, 26);
-            this.sulgeNupp.Text = "sulge";
-            this.sulgeNupp.Click += new EventHandler(this.sulgeNupp_Click);
+            sulgeNupp.AutoSize = true;
+            sulgeNupp.Location = new Point(282, 3);
+            sulgeNupp.Name = "sulgeNupp";
+            sulgeNupp.Size = new Size(75, 26);
+            sulgeNupp.Text = "sulge";
+            sulgeNupp.Click += new EventHandler(this.sulgeNupp_Click);
 
             // 
             // openFileDialog1
             // 
 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All file" +
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All file" +
             "s (*.*)|*.*";
-            this.openFileDialog1.Title = "Valige a pilt fail";
+            openFileDialog1.Title = "Valige a pilt fail";
 
             // 
             // Form1
             // 
 
-            this.AutoScaleDimensions = new SizeF(8F, 16F);
-            this.AutoScaleMode = AutoScaleMode.Font;
-            this.ClientSize = new Size(800, 450);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 16F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(this.tableLayoutPanel1);
+            Name = "Form1";
+            Text = "Form1";
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             
           
