@@ -96,14 +96,14 @@ namespace rakenduste_ul
             // puhasta
             // 
 
-            puhasta.AutoSize = true;
-            puhasta.Location = new Point(505, 3);
-            puhasta.Name = "puhasta";
-            puhasta.Size = new Size(85, 26);
-            puhasta.TabIndex = 1;
-            puhasta.Text = "puhasta pilt";
-            puhasta.UseVisualStyleBackColor = true;
-            puhasta.Click += new EventHandler(puhasta_Click);
+            this.puhasta.AutoSize = true;
+            this.puhasta.Location = new Point(505, 3);
+            this.puhasta.Name = "puhasta";
+            this.puhasta.Size = new Size(85, 26);
+            this.puhasta.TabIndex = 1;
+            this.puhasta.Text = "puhasta pilt";
+            this.puhasta.UseVisualStyleBackColor = true;
+            this.puhasta.Click += new EventHandler(this.puhasta_Click);
 
             // 
             // taustvarv
@@ -114,7 +114,7 @@ namespace rakenduste_ul
             taustvarv.Name = "taustvarv";
             taustvarv.Size = new Size(136, 26);
             taustvarv.Text = "Määrake taustavärv";
-            taustvarv.Click += new EventHandler(taustvarv_Click);
+            taustvarv.Click += new EventHandler(this.taustvarv_Click);
 
             // 
             // sulgeNupp
@@ -125,7 +125,7 @@ namespace rakenduste_ul
             sulgeNupp.Name = "sulgeNupp";
             sulgeNupp.Size = new Size(75, 26);
             sulgeNupp.Text = "sulge";
-            sulgeNupp.Click += new EventHandler(sulgeNupp_Click);
+            sulgeNupp.Click += new EventHandler(this.sulgeNupp_Click);
 
             // 
             // openFileDialog1
@@ -145,7 +145,7 @@ namespace rakenduste_ul
             ClientSize = new Size(800, 450);
             Controls.Add(this.tableLayoutPanel1);
             Name = "Form1";
-            Text = "PildiVaatamine app";
+            Text = "PildiVaatamineApp";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -203,3 +203,7 @@ namespace rakenduste_ul
 
     }
 }
+
+//1-можно попробовать реализовать возможность просмотра видео?) / võite proovida rakendada video vaatamise võimalust)
+//2-думаем 
+//3-думаем

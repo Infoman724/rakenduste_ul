@@ -240,8 +240,8 @@ namespace rakenduste_ul
             label1.Size = new Size(123, 124);
             label1.TabIndex = 0;
             label1.Text = "C";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += new EventHandler(this.label_click);                         //оригинал выше копии с измененными (локацией,именем и индексом)
+            label1.TextAlign = ContentAlignment.MiddleCenter;                           //клеточки для иконок
+            label1.Click += new EventHandler(this.label_click);                         //оригинал, выше копии с измененными (локацией,именем и индексом) 
             // 
             // timer1
             // 
@@ -363,3 +363,8 @@ namespace rakenduste_ul
 
     }
 }
+
+//1- можно попробовать реализовать возможность менять количества клеток для иконок
+//2-можно попробоавть реалилзовать возможность пользователю лично выбирать картинки для игры
+//3-можно попробовать не умереть от колво работы(шутка) 
+//4-можно попробовать перемешывать в иконки чтобы они были разные сейчас одни и те же каждую игру но в разных местах
