@@ -34,9 +34,9 @@ namespace rakenduste_ul
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85F));
-            tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
-            tableLayoutPanel1.Controls.Add(this.checkBox1, 0, 1);
-            tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 1);
+            tableLayoutPanel1.Controls.Add(pictureBox1, 0, 0);
+            tableLayoutPanel1.Controls.Add(checkBox1, 0, 1);
+            tableLayoutPanel1.Controls.Add(flowLayoutPanel1, 1, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -71,10 +71,10 @@ namespace rakenduste_ul
             // flowLayoutPanel1
             // 
 
-            flowLayoutPanel1.Controls.Add(this.naita);
-            flowLayoutPanel1.Controls.Add(this.puhasta);
-            flowLayoutPanel1.Controls.Add(this.taustvarv);
-            flowLayoutPanel1.Controls.Add(this.sulgeNupp);
+            flowLayoutPanel1.Controls.Add(naita);
+            flowLayoutPanel1.Controls.Add(puhasta);
+            flowLayoutPanel1.Controls.Add(taustvarv);
+            flowLayoutPanel1.Controls.Add(sulgeNupp);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
             flowLayoutPanel1.Location = new Point(123, 408);
@@ -96,58 +96,58 @@ namespace rakenduste_ul
             // puhasta
             // 
 
-            this.puhasta.AutoSize = true;
-            this.puhasta.Location = new Point(505, 3);
-            this.puhasta.Name = "puhasta";
-            this.puhasta.Size = new Size(85, 26);
-            this.puhasta.TabIndex = 1;
-            this.puhasta.Text = "puhasta pilt";
-            this.puhasta.UseVisualStyleBackColor = true;
-            this.puhasta.Click += new EventHandler(this.puhasta_Click);
+            puhasta.AutoSize = true;
+            puhasta.Location = new Point(505, 3);
+            puhasta.Name = "puhasta";
+            puhasta.Size = new Size(85, 26);
+            puhasta.TabIndex = 1;
+            puhasta.Text = "puhasta pilt";
+            puhasta.UseVisualStyleBackColor = true;
+            puhasta.Click += new EventHandler(puhasta_Click);
 
             // 
             // taustvarv
             // 
 
-            this.taustvarv.AutoSize = true;
-            this.taustvarv.Location = new Point(363, 3);
-            this.taustvarv.Name = "taustvarv";
-            this.taustvarv.Size = new Size(136, 26);
-            this.taustvarv.Text = "Määrake taustavärv";
-            this.taustvarv.Click += new EventHandler(this.taustvarv_Click);
+            taustvarv.AutoSize = true;
+            taustvarv.Location = new Point(363, 3);
+            taustvarv.Name = "taustvarv";
+            taustvarv.Size = new Size(136, 26);
+            taustvarv.Text = "Määrake taustavärv";
+            taustvarv.Click += new EventHandler(taustvarv_Click);
 
             // 
             // sulgeNupp
             // 
 
-            this.sulgeNupp.AutoSize = true;
-            this.sulgeNupp.Location = new Point(282, 3);
-            this.sulgeNupp.Name = "sulgeNupp";
-            this.sulgeNupp.Size = new Size(75, 26);
-            this.sulgeNupp.Text = "sulge";
-            this.sulgeNupp.Click += new EventHandler(this.sulgeNupp_Click);
+            sulgeNupp.AutoSize = true;
+            sulgeNupp.Location = new Point(282, 3);
+            sulgeNupp.Name = "sulgeNupp";
+            sulgeNupp.Size = new Size(75, 26);
+            sulgeNupp.Text = "sulge";
+            sulgeNupp.Click += new EventHandler(sulgeNupp_Click);
 
             // 
             // openFileDialog1
             // 
 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All file" +
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All file" +
             "s (*.*)|*.*";
-            this.openFileDialog1.Title = "Valige a pilt fail";
+            openFileDialog1.Title = "Valige a pilt fail";
 
             // 
             // Form1
             // 
 
-            this.AutoScaleDimensions = new SizeF(8F, 16F);
-            this.AutoScaleMode = AutoScaleMode.Font;
-            this.ClientSize = new Size(800, 450);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 16F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(this.tableLayoutPanel1);
+            Name = "Form1";
+            Text = "PildiVaatamine app";
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             
           

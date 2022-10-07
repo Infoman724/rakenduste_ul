@@ -293,7 +293,7 @@ namespace rakenduste_ul
             startNupp.Name = "startButton";
             startNupp.Size = new Size(127, 34);
             startNupp.TabIndex = 1;
-            startNupp.Text = "Start the quiz";
+            startNupp.Text = "Algus quiz";
             startNupp.UseVisualStyleBackColor = true;
             startNupp.Click += new EventHandler(this.startButton_Click);
             // 
