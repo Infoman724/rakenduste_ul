@@ -527,6 +527,6 @@ namespace rakenduste_ul
     }
 }
 
-//1-можно сделать задачи по сложнее? / saate ülesandeid keerulisemaks muuta
-//2-можно сделать чтобы программа моглу давать подсказку если не знаешь ответ saab / teha nii, et programm oskab anda vihje, kui vastust ei tea
-//3-можно сделать чтобы программа подбадривала если пару раз подряд не успеваешь дать правильный овтвет / saate programmi panna teid rõõmustama, kui teil pole aega paar korda järjest õiget vastust anda
+//1-можно сделать задачи по сложнее? / saate ülesandeid keerulisemaks muuta p.s либо после игры либо добавить кнопку по нажатию на которую примеры станоятся сложнее next 
+//2-можно сделать чтобы программа моглу давать подсказку если не знаешь ответ saab / teha nii, et programm oskab anda vihje, kui vastust ei tea p.s поставить маленькую кнопку при нажатии на которую где то высвечивается ответ
+//3-можно сделать чтобы программа подбадривала если пару раз подряд не успеваешь дать правильный овтвет / saate programmi panna teid rõõmustama, kui teil pole aega paar korda järjest õiget vastust anda п.с да
