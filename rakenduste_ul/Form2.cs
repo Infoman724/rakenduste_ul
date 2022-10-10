@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace rakenduste_ul
 {
@@ -35,6 +36,7 @@ namespace rakenduste_ul
         int AegVeel;
         private void InitializeComponent()//функция из которой запускается/работает программа
         {
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(Form2));
             components = new Container();
             AegLabel = new Label();
             label1 = new Label();
@@ -61,7 +63,13 @@ namespace rakenduste_ul
             startNupp = new Button();
             timer1 = new Timer(this.components);
             NaitaDate = new Label();
-            
+            Lihtsamvar = new Button(); //1
+            Raskemvar = new Button(); //2
+            tip = new Button();
+            tip4 = new Button();
+            tip3 = new Button();
+            tip2 = new Button();
+
             // 
             // timeLabel
             // 
@@ -116,7 +124,7 @@ namespace rakenduste_ul
             // 
             // label4
             // 
-            label4.Font = new Font("Microsoft Sans Serif", 18F,System.Drawing.FontStyle.Regular);
+            label4.Font = new Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular);
             label4.Location = new Point(116, 75);
             label4.Name = "label4";
             label4.Size = new Size(60, 50);
@@ -277,7 +285,7 @@ namespace rakenduste_ul
             // 
             // jagatisVasakLabel
             // 
-            jagatisVasakLabel.Font = new Font("Microsoft Sans Serif", 18F,FontStyle.Regular);
+            jagatisVasakLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular);
             jagatisVasakLabel.Location = new Point(50, 225);
             jagatisVasakLabel.Name = "jagatisVasakLabel";
             jagatisVasakLabel.Size = new Size(60, 50);
@@ -288,7 +296,7 @@ namespace rakenduste_ul
             // startButton
             // 
             startNupp.AutoSize = true;
-            startNupp.Font = new Font("Microsoft Sans Serif", 14F,FontStyle.Regular);
+            startNupp.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular);
             startNupp.Location = new Point(157, 302);
             startNupp.Name = "startButton";
             startNupp.Size = new Size(127, 34);
@@ -302,15 +310,85 @@ namespace rakenduste_ul
             timer1.Interval = 1000;
             timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // Lihtsamvar //1
+            // 
+            Lihtsamvar.AutoSize = true;
+            Lihtsamvar.BackColor = System.Drawing.Color.Green;
+            Lihtsamvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Lihtsamvar.Location = new System.Drawing.Point(22, 302);
+            Lihtsamvar.Name = "Lihtsamvar";
+            Lihtsamvar.Size = new System.Drawing.Size(120, 40);
+            Lihtsamvar.TabIndex = 22;
+            Lihtsamvar.Text = "Lihtsam";
+            Lihtsamvar.UseVisualStyleBackColor = false;
+            Lihtsamvar.Click += new System.EventHandler(this.Lihtsamvar_Click);
+            // 
+            // Raskemvar //2
+            // 
+            Raskemvar.BackColor = System.Drawing.Color.Red;
+            Raskemvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Raskemvar.Location = new System.Drawing.Point(314, 302);
+            Raskemvar.Name = "Raskemvar";
+            Raskemvar.Size = new System.Drawing.Size(104, 39);
+            Raskemvar.TabIndex = 23;
+            Raskemvar.Text = "Raskem";
+            Raskemvar.UseVisualStyleBackColor = false;
+            Raskemvar.Click += new System.EventHandler(this.Raskemvar_Click);
+            // 
             // showDate
             // 
+
             NaitaDate.AutoSize = true;
             NaitaDate.Location = new Point(360, 320);
             NaitaDate.Name = "showDate";
             NaitaDate.Size = new Size(0, 13);
             NaitaDate.TabIndex = 21;
             // 
-            // Form1
+            // tip
+            // 
+            tip.BackgroundImage = ((Image)(resources.GetObject("tip.BackgroundImage")));
+            tip.Font = new Font("Microsoft Sans Serif", 13.1F, FontStyle.Regular);
+            tip.Location = new Point(420, 90);
+            tip.Name = "tip";
+            tip.Size = new Size(70, 41);
+            tip.TabIndex = 24;
+            tip.Text = ".";
+            tip.Click += new EventHandler(this.button1_Click);
+            // 
+            // tip4
+            // 
+            tip4.BackgroundImage = ((Image)(resources.GetObject("tip4.BackgroundImage")));
+            tip4.Font = new Font("Microsoft Sans Serif", 13.1F, FontStyle.Regular);
+            tip4.Location = new Point(420, 240);
+            tip4.Name = "tip4";
+            tip4.Size = new Size(70, 41);
+            tip4.TabIndex = 25;
+            tip4.Text = ".";
+            tip4.Click += new EventHandler(this.tip4_Click);
+            // 
+            // tip3
+            // 
+            tip3.BackgroundImage = ((Image)(resources.GetObject("tip3.BackgroundImage")));
+            tip3.Font = new Font("Microsoft Sans Serif", 13.1F, FontStyle.Regular);
+            tip3.Location = new Point(420, 190);
+            tip3.Name = "tip3";
+            tip3.Size = new Size(70, 41);
+            tip3.TabIndex = 26;
+            tip3.Text = ".";
+            tip3.Click += new EventHandler(this.tip3_Click);
+            // 
+            // tip2
+            // 
+            tip2.BackgroundImage = ((Image)(resources.GetObject("tip2.BackgroundImage")));
+            tip2.Font = new Font("Microsoft Sans Serif", 13.1F, FontStyle.Regular);
+            tip2.Location = new Point(420, 140);
+            tip2.Name = "tip2";
+            tip2.Size = new Size(70, 41);
+            tip2.TabIndex = 27;
+            tip2.Text = ".";
+            tip2.Click += new EventHandler(this.tip2_Click);
+            // 
+            // Form2
             // 
             ClientSize = new Size(484, 361);
             Controls.Add(NaitaDate);
@@ -338,15 +416,18 @@ namespace rakenduste_ul
             Controls.Add(label1);
             Controls.Add(AegLabel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            Controls.Add(Raskemvar); //2
+            Controls.Add(Lihtsamvar); //1
+            Controls.Add(tip);
+            Controls.Add(tip2);
+            Controls.Add(tip3);
+            Controls.Add(tip4);
+
 
             MaximizeBox = false;
             Name = "Form1";
             Text = "Matemaateline Quiz";
         }
-
-        
-
-        
 
         public void StartTheQuiz()
         {
@@ -398,7 +479,7 @@ namespace rakenduste_ul
             AegVeel = 30;
             AegLabel.Text = "30 sekundid";
             timer1.Start();
-        }
+        }//функция при которая запускается при нажатии одной из трех кнопок
         //функция проверяет правильность введеных ответов
         private bool CheckTheAnswer()
         {
@@ -431,6 +512,7 @@ namespace rakenduste_ul
         private void startButton_Click(object sender, EventArgs e)
         {
             StartTheQuiz();
+            MuusikaKuulamine("strange.wav");
             startNupp.Enabled = false;
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -440,7 +522,7 @@ namespace rakenduste_ul
             if (CheckTheAnswer())
             {
                 timer1.Stop();
-                MessageBox.Show("Sa said kõik vastused õiged. Palju õnne!");
+                MessageBox.Show("Sa said kõik vastused õiged. Palju õnne!", "Kas tahad tegi ülesanned Raskemaks? Siis click 'Raskem'"); //4
                 startNupp.Enabled = true;
             }
 
@@ -466,7 +548,7 @@ namespace rakenduste_ul
                 //Функция Останавливает время и оповещает о том что время вышло
                 timer1.Stop();
                 AegLabel.Text = "pole enam aega!";
-                MessageBox.Show("Sa ei lõpetanud õigeks ajaks.", "Vabandust!");
+                MessageBox.Show("Sa ei lõpetanud õigeks ajaks. Kas sa tahad tegi ülesanned lihtsamaks? siis click 'Lihtsamaks'", "Vabandust edu järgmisel korral");//4
 
                 sum.Value = addend1 + addend2;
                 erinevus.Value = diffend1 - diffend2;
@@ -497,7 +579,7 @@ namespace rakenduste_ul
                 System.Media.SystemSounds.Exclamation.Play();
             }
         }
-        
+
 
         private Label AegLabel;
         private Label label1;
@@ -524,9 +606,139 @@ namespace rakenduste_ul
         private Button startNupp;
         private Timer timer1;
         private Label NaitaDate;
+        private Button Lihtsamvar;//1
+        private Button Raskemvar;//2
+        private Button tip;
+        private Button tip2;
+        private Button tip3;
+        private Button tip4;
+
+
+        private void Lihtsamvar_Click(object sender, EventArgs e)
+        {
+            MuusikaKuulamine("det.wav");
+            StartTheQuiz();
+            Lihtsamvar.Enabled = false;
+            //на +
+            addend1 = randomizer.Next(25);
+            addend2 = randomizer.Next(25);
+
+            plusVasakLabel.Text = addend1.ToString();
+            plusParemLabel.Text = addend2.ToString();
+
+            //создает задачу на вычитание
+            diffend1 = randomizer.Next(1, 50);
+            diffend2 = randomizer.Next(1, diffend1);
+
+            //преобразовывет значения в "string"
+            erinevusVasakLabel.Text = diffend1.ToString();
+            erinevusParemLabel.Text = diffend2.ToString();
+            erinevus.Value = 0;
+
+            //генерирует задачу на умножение
+            multiplicand = randomizer.Next(1, 10);
+            multiplier = randomizer.Next(1, 10);
+
+            //эти строки конвертируют в "string"
+            toodVasakLabel.Text = multiplicand.ToString();
+            toodParemLabel.Text = multiplier.ToString();
+            tood.Value = 0;
+
+            //генерирует задачу на деление
+            divisor = randomizer.Next(1, 10);
+            int temporayjagatis = randomizer.Next(1, 10);
+            dividend = divisor * temporayjagatis;
+
+            //эти строки конвертируют в тип "string"
+            jagatisVasakLabel.Text = dividend.ToString();
+            jagatisParemLabel.Text = divisor.ToString();
+
+            //проверяет равна ли jagatis нулю
+            jagatis.Value = 0;
+        } //1
+
+        private void Raskemvar_Click(object sender, EventArgs e)
+        {
+            StartTheQuiz();
+            MuusikaKuulamine("doom.wav");
+            Raskemvar.Enabled = false;
+            //на +
+            addend1 = randomizer.Next(200);
+            addend2 = randomizer.Next(200);
+
+            plusVasakLabel.Text = addend1.ToString();
+            plusParemLabel.Text = addend2.ToString();
+
+            //создает задачу на вычитание
+            diffend1 = randomizer.Next(2, 200);
+            diffend2 = randomizer.Next(2, diffend1);
+
+            //преобразовывет значения в "string"
+            erinevusVasakLabel.Text = diffend1.ToString();
+            erinevusParemLabel.Text = diffend2.ToString();
+            erinevus.Value = 0;
+
+            //генерирует задачу на умножение
+            multiplicand = randomizer.Next(2, 12);
+            multiplier = randomizer.Next(2, 12);
+
+            //эти строки конвертируют в "string"
+            toodVasakLabel.Text = multiplicand.ToString();
+            toodParemLabel.Text = multiplier.ToString();
+            tood.Value = 0;
+
+            //генерирует задачу на деление
+            divisor = randomizer.Next(2, 12);
+            int temporayjagatis = randomizer.Next(2, 12);
+            dividend = divisor * temporayjagatis;
+
+            //эти строки конвертируют в тип "string"
+            jagatisVasakLabel.Text = dividend.ToString();
+            jagatisParemLabel.Text = divisor.ToString();
+
+            //проверяет равна ли jagatis нулю
+            jagatis.Value = 0;
+        } //2
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int v = addend1 + addend2;
+            tip.Text = v.ToString();
+        } //3
+
+        private void tip2_Click(object sender, EventArgs e)
+        {
+            int v = diffend1 - diffend2;
+            tip2.Text = v.ToString();
+        } //3
+
+        private void tip3_Click(object sender, EventArgs e)
+        {
+            int v = multiplicand * multiplier;
+            tip3.Text = v.ToString();
+        } //3
+
+        private void tip4_Click(object sender, EventArgs e)
+        {
+            int v = dividend / divisor;
+            tip4.Text = v.ToString();
+        } //3
+
+        public void MuusikaKuulamine(string song)              //функция прослушивания музыки принимающая за аргумент название файла типа "string"
+        {
+            string[] songs = { "doom.wav", "strange.wav", "det.wav" };
+            using (var muusika = new SoundPlayer(@"../../" + song))         //используя переменную "muusika" типа "var" которая равна созданнуму обьекту "SoundPlayer" с аргументом в виде "file" который мы передали
+            {
+                muusika.Play();                                 //используем встроенную функцию проигрывания файла
+            }
+
+        }
     }
 }
 
-//1-можно сделать задачи по сложнее? / saate ülesandeid keerulisemaks muuta p.s либо после игры либо добавить кнопку по нажатию на которую примеры станоятся сложнее next 
-//2-можно сделать чтобы программа моглу давать подсказку если не знаешь ответ saab / teha nii, et programm oskab anda vihje, kui vastust ei tea p.s поставить маленькую кнопку при нажатии на которую где то высвечивается ответ
-//3-можно сделать чтобы программа подбадривала если пару раз подряд не успеваешь дать правильный овтвет / saate programmi panna teid rõõmustama, kui teil pole aega paar korda järjest õiget vastust anda п.с да
+//1-можно сделать задачи по сложнее / saate ülesandeid keerulisemaks muuta                       
+//2-можно сделать задачи по легче / saate ülesandeid lihtsamaks muuta                            
+//3-можно сделать чтобы программа моглу давать подсказку если не знаешь ответ saab / teha nii, et programm oskab anda vihje, kui vastust ei tea p.s поставить маленькую кнопку при нажатии на которую где то высвечивается ответ
+//4-можно сделать чтобы программа подбадривала и утешала в частном случае / saate muuta programmi konkreetsel juhul rõõmsaks ja mugavuseks 
+//5-добавить музыку на разные варианты задания
+//1,2,3,4 REALISEERITUD

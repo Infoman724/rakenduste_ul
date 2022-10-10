@@ -346,7 +346,6 @@ namespace rakenduste_ul
             foreach (Control control in tableLayoutPanel1.Controls)
             {
                 Label iconLabel = control as Label;
-
                 if (iconLabel != null)
                 {
                     if (iconLabel.ForeColor == iconLabel.BackColor)
