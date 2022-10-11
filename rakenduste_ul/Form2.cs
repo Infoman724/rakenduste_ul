@@ -741,4 +741,4 @@ namespace rakenduste_ul
 //3-можно сделать чтобы программа моглу давать подсказку если не знаешь ответ saab / teha nii, et programm oskab anda vihje, kui vastust ei tea p.s поставить маленькую кнопку при нажатии на которую где то высвечивается ответ
 //4-можно сделать чтобы программа подбадривала и утешала в частном случае / saate muuta programmi konkreetsel juhul rõõmsaks ja mugavuseks 
 //5-добавить музыку на разные варианты задания
-//1,2,3,4 REALISEERITUD
+//1,2,3,4,5 REALISEERITUD

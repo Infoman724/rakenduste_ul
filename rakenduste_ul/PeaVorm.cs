@@ -34,8 +34,8 @@ namespace rakenduste_ul
 
         private void button3_Click(object sender, EventArgs e)
         {
-            form3new1 form3new1 = new form3new1();
-            form3new1.ShowDialog();
+            form3 form3 = new form3();
+            form3.ShowDialog();
         }
     }
 }

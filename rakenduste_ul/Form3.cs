@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace rakenduste_ul
 {
-    public partial class form3new1 : Form
+    public partial class form3 : Form
     {
-        
+
         Label firstClicked = null;
         Label secondClicked = null;
         Container components;
@@ -93,155 +93,32 @@ namespace rakenduste_ul
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.Size = new Size(534, 511);
+            for (int i = 0; i < 15; i++)
+            {
+                label_method(label1, 6, 3, "label1", 123, 124, "C", 0, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            }
+            
 
-            // 
-            // label16
-            // 
-            label16.Font = new Font("Webdings", 72F, FontStyle.Regular);
-            label16.Location = new Point(402, 384);
-            label16.Name = "label16";
-            label16.Size = new Size(126, 124);
-            label16.TabIndex = 0;
-            label16.Click += new EventHandler(this.label_click);
-            // 
-            // label15
-            // 
-            label15.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label15.Location = new Point(270, 384);
-            label15.Name = "label15";
-            label15.Size = new Size(123, 124);
-            label15.TabIndex = 1;
-            label15.Click += new EventHandler(this.label_click);
-            // 
-            // label14
-            // 
-            label14.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label14.Location = new Point(138, 384);
-            label14.Name = "label14";
-            label14.Size = new Size(123, 124);
-            label14.TabIndex = 2;
-            label14.Click += new EventHandler(this.label_click);
-            // 
-            // label13
-            // 
-            label13.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label13.Location = new Point(6, 384);
-            label13.Name = "label13";
-            label13.Size = new Size(123, 124);
-            label13.TabIndex = 3;
-            label13.Click += new EventHandler(this.label_click);
-            // 
-            // label12
-            // 
-            label12.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label12.Location = new Point(402, 257);
-            label12.Name = "label12";
-            label12.Size = new Size(126, 124);
-            label12.TabIndex = 4;
-            label12.Click += new EventHandler(this.label_click);
-            // 
-            // label11
-            // 
-            label11.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label11.Location = new Point(270, 257);
-            label11.Name = "label11";
-            label11.Size = new Size(123, 124);
-            label11.TabIndex = 5;
-            label11.Click += new EventHandler(this.label_click);
-            // 
-            // label10
-            // 
-            label10.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label10.Location = new Point(138, 257);
-            label10.Name = "label10";
-            label10.Size = new Size(123, 124);
-            label10.TabIndex = 6;
-            label10.Click += new EventHandler(this.label_click);
-            // 
-            // label9
-            // 
-            label9.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label9.Location = new Point(6, 257);
-            label9.Name = "label9";
-            label9.Size = new Size(123, 124);
-            label9.TabIndex = 7;
-            label9.Click += new EventHandler(this.label_click);
-            // 
-            // label8
-            // 
-            label8.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label8.Location = new Point(402, 130);
-            label8.Name = "label8";
-            label8.Size = new Size(126, 124);
-            label8.TabIndex = 8;
-            label8.Click += new EventHandler(this.label_click);
-            // 
-            // label7
-            // 
-            label7.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label7.Location = new Point(270, 130);
-            label7.Name = "label7";
-            label7.Size = new Size(123, 124);
-            label7.TabIndex = 9;
-            label7.Click += new EventHandler(this.label_click);
-            // 
-            // label6
-            // 
-            label6.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label6.Location = new Point(138, 130);
-            label6.Name = "label6";
-            label6.Size = new Size(123, 124);
-            label6.TabIndex = 10;
-            label6.Click += new EventHandler(this.label_click);
-            // 
-            // label5
-            // 
-            label5.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label5.Location = new Point(6, 130);
-            label5.Name = "label5";
-            label5.Size = new Size(123, 124);
-            label5.TabIndex = 11;
-            label5.Click += new EventHandler(this.label_click);
-            // 
-            // label4
-            // 
-            label4.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label4.Location = new Point(402, 3);
-            label4.Name = "label4";
-            label4.Size = new Size(126, 124);
-            label4.TabIndex = 12;
-            label4.Click += new EventHandler(this.label_click);
-            // 
-            // label3
-            // 
-            label3.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label3.Location = new Point(270, 3);
-            label3.Name = "label3";
-            label3.Size = new Size(123, 124);
-            label3.TabIndex = 13;
-            label3.Click += new EventHandler(this.label_click);
-            // 
-            // label2
-            // 
-            label2.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label2.Location = new Point(138, 3);
-            label2.Name = "label2";
-            label2.Size = new Size(123, 124);
-            label2.TabIndex = 14;
-            label2.Click += new EventHandler(this.label_click);
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Webdings", 72F, System.Drawing.FontStyle.Regular);
-            label1.Location = new Point(6, 3);
-            label1.Name = "label1";
-            label1.Size = new Size(123, 124);
-            label1.TabIndex = 0;
-            label1.Text = "C";
-            label1.TextAlign = ContentAlignment.MiddleCenter;                           //клеточки для иконок
-            label1.Click += new EventHandler(this.label_click);                         //оригинал, выше копии с измененными (локацией,именем и индексом) 
+            /*label_method(label1, 6, 3, "label1", 123, 124, "C", 0, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label2, 138, 3, "label1", 123, 124, "C", 1, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label3, 270, 3, "label1", 123, 124, "C", 2, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));//1 rida
+            label_method(label4, 402, 3, "label1", 123, 124, "C", 3, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+
+            label_method(label5, 6, 130, "label1", 123, 124, "C", 4, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label6, 6, 3, "label1", 123, 124, "C", 5, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label7, 6, 3, "label1", 123, 124, "C", 6, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label8, 6, 3, "label1", 123, 124, "C", 7, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+
+            label_method(label9, 6, 3, "label1", 123, 124, "C", 8, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label10, 6, 3, "label1", 123, 124, "C", 9, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label11, 6, 3, "label1", 123, 124, "C", 10, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label12, 6, 3, "label1", 123, 124, "C", 11, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+
+            label_method(label13, 6, 3, "label1", 123, 124, "C", 12, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label14, 6, 3, "label1", 123, 124, "C", 13, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label15, 6, 3, "label1", 123, 124, "C", 14, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));
+            label_method(label16, 6, 3, "label1", 123, 124, "C", 15, new Font("Webdings", 72F, System.Drawing.FontStyle.Regular));*/
+
             // 
             // timer1
             // 
@@ -262,7 +139,7 @@ namespace rakenduste_ul
 
         }
         
-        private void label_method(Label label,int x, int y,string nimi,int a, int b, string text, int index, Font font)
+        public void label_method(Label label, int x, int y, string nimi, int a, int b, string text, int index, Font font)
         {
             label.AutoSize = true;
             label.Location = new Point(x, y);
@@ -271,7 +148,7 @@ namespace rakenduste_ul
             label.Text = text;
             label.TabIndex = index;
             label.Font = font;
-
+            label.Click += new EventHandler(this.label_click);
         }
 
         List<string> icons = new List<string>()
@@ -280,7 +157,7 @@ namespace rakenduste_ul
             "b", "b", "k", "k", "M", "M", "1", "1"
         };
 
-        public form3new1()
+        public form3()
         {
             InitializeComponent();
             IkoonideMaaramineRuutudele();
@@ -375,6 +252,6 @@ namespace rakenduste_ul
 }
 
 //1- можно попробовать реализовать возможность менять количества клеток для иконок / võite proovida rakendada ikoonide lahtrite arvu muutmise võimalust
-//2-можно попробоавть реалилзовать возможность пользователю лично выбирать картинки для игры / võite proovida rakendada võimalust, et kasutaja saab mängu jaoks pilte isiklikult valida
-//3-можно попробовать не умереть от колво работы(шутка) 
-//4-можно попробовать перемешывать в иконки чтобы они были разные сейчас одни и те же каждую игру но в разных местах / võite proovida ikoone segada nii, et need oleksid nüüd igas mängus samad, kuid erinevates kohtades
+//2-можно попробоавть реалилзовать возможность пользователю лично выбирать картинки для игры / võite proovida rakendada võimalust, et kasutaja saab mängu jaoks pilte isiklikult valida 
+//3-можно попробовать перемешывать в иконки чтобы они были разные сейчас одни и те же каждую игру но в разных местах / võite proovida ikoone segada nii, et need oleksid nüüd igas mängus samad, kuid erinevates kohtades
+//4-добавлен метод создания заголовка
