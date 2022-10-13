@@ -26,8 +26,9 @@ namespace rakenduste_ul
             sulgeNupp = new Button();
             openFileDialog1 = new OpenFileDialog();
             colorDialog1 = new ColorDialog();
-            
-            
+            MeediaPlayer = new Button();
+
+
             // 
             // tableLayoutPanel1
             // 
@@ -75,6 +76,7 @@ namespace rakenduste_ul
             flowLayoutPanel1.Controls.Add(puhasta);
             flowLayoutPanel1.Controls.Add(taustvarv);
             flowLayoutPanel1.Controls.Add(sulgeNupp);
+            flowLayoutPanel1.Controls.Add(MeediaPlayer);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
             flowLayoutPanel1.Location = new Point(123, 408);
@@ -149,8 +151,20 @@ namespace rakenduste_ul
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            
-          
+
+            // 
+            // MeediaPlayer
+            // 
+            MeediaPlayer.AutoSize = true;
+            MeediaPlayer.BackColor =Color.Red;
+            MeediaPlayer.ForeColor =Color.White;
+            MeediaPlayer.Location = new Point(174, 3);
+            MeediaPlayer.Name = "MeediaPlayer";
+            MeediaPlayer.Size = new Size(102, 26);
+            MeediaPlayer.TabIndex = 1;
+            MeediaPlayer.Text = "MeediaPlayer";
+            MeediaPlayer.UseVisualStyleBackColor = false;
+            MeediaPlayer.Click += new EventHandler(this.MeediaPlayer_Click);
 
 
 
@@ -200,7 +214,11 @@ namespace rakenduste_ul
             this.Close();
         }
 
-
+        private void MeediaPlayer_Click(object sender, EventArgs e)
+        {
+            MeediaPlayer meedia = new MeediaPlayer();
+            meedia.ShowDialog();
+        }
     }
 }
 

@@ -38,6 +38,7 @@
             this.sulgeNupp = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.MeediaPlayer = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -88,6 +89,7 @@
             this.flowLayoutPanel1.Controls.Add(this.puhasta);
             this.flowLayoutPanel1.Controls.Add(this.taustvarv);
             this.flowLayoutPanel1.Controls.Add(this.sulgeNupp);
+            this.flowLayoutPanel1.Controls.Add(this.MeediaPlayer);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(123, 408);
@@ -143,8 +145,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All file" +
-            "s (*.*)|*.*";
+    "s (*.*)|*.*";
             this.openFileDialog1.Title = "Valige a pilt fail";
+            // 
+            // MeediaPlayer
+            // 
+            this.MeediaPlayer.AutoSize = true;
+            this.MeediaPlayer.BackColor = System.Drawing.Color.Red;
+            this.MeediaPlayer.ForeColor = System.Drawing.Color.White;
+            this.MeediaPlayer.Location = new System.Drawing.Point(174, 3);
+            this.MeediaPlayer.Name = "MeediaPlayer";
+            this.MeediaPlayer.Size = new System.Drawing.Size(102, 26);
+            this.MeediaPlayer.TabIndex = 1;
+            this.MeediaPlayer.Text = "MeediaPlayer";
+            this.MeediaPlayer.UseVisualStyleBackColor = false;
+            this.MeediaPlayer.Click += new System.EventHandler(this.MeediaPlayer_Click);
             // 
             // Form1
             // 
@@ -175,6 +190,7 @@
         private System.Windows.Forms.Button sulgeNupp;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button MeediaPlayer;
     }
 }
 

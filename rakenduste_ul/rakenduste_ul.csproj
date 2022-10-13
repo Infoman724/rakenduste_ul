@@ -53,11 +53,11 @@
       <DependentUpon>form1.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form1copy.cs">
+    <Compile Include="MeediaPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form1copy.Designer.cs">
-      <DependentUpon>form1copy.cs</DependentUpon>
+    <Compile Include="MeediaPlayer.Designer.cs">
+      <DependentUpon>MeediaPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -88,6 +88,9 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MeediaPlayer.resx">
+      <DependentUpon>MeediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PeaVorm.resx">
       <DependentUpon>PeaVorm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +120,25 @@
     <Content Include="det.wav" />
     <Content Include="doom.wav" />
     <Content Include="strange.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
