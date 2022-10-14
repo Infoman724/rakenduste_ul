@@ -119,6 +119,7 @@
   <ItemGroup>
     <Content Include="det.wav" />
     <Content Include="doom.wav" />
+    <Content Include="ReadMe.txt" />
     <Content Include="strange.wav" />
   </ItemGroup>
   <ItemGroup>

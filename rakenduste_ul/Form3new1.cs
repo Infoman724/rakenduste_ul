@@ -374,7 +374,8 @@ namespace rakenduste_ul
     }
 }
 
-//1- можно попробовать реализовать возможность менять количества клеток для иконок / võite proovida rakendada ikoonide lahtrite arvu muutmise võimalust
+//1-можно попробовать реализовать возможность менять количества клеток для иконок / võite proovida rakendada ikoonide lahtrite arvu muutmise võimalust
 //2-можно попробоавть реалилзовать возможность пользователю лично выбирать картинки для игры / võite proovida rakendada võimalust, et kasutaja saab mängu jaoks pilte isiklikult valida
-//3-можно попробовать не умереть от колво работы(шутка) 
-//4-можно попробовать перемешывать в иконки чтобы они были разные сейчас одни и те же каждую игру но в разных местах / võite proovida ikoone segada nii, et need oleksid nüüd igas mängus samad, kuid erinevates kohtades
+//3-Музыкальное сопровождение/для всего процесса/и для выигрыша например   /Muusikaline saate/kogu protsessi/ja auhinnavõidu eest
+//4-можно добавить видимый таймер показывающий сколько времени осталось чтобы пройти игру / saate lisada nähtava taimeri, mis näitab, kui palju aega on mängu lõpetamiseks jäänud
+//5-сначала показывать картинки а потом они пропадают чтобы отгадывать / kõigepealt näita pilte ja siis need kaovad ära arvama
