@@ -69,6 +69,7 @@ namespace rakenduste_ul
             tip4 = new Button();
             tip3 = new Button();
             tip2 = new Button();
+            SulgeNupp = new Button();
 
             // 
             // timeLabel
@@ -388,9 +389,22 @@ namespace rakenduste_ul
             tip2.Text = ".";
             tip2.Click += new EventHandler(this.tip2_Click);
             // 
+            // SulgeNupp
+            // 
+            SulgeNupp.BackColor = Color.Red;
+            SulgeNupp.Font = new Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            SulgeNupp.Location = new System.Drawing.Point(1, 1);
+            SulgeNupp.Name = "SulgeNupp";
+            SulgeNupp.Size = new Size(75, 23);
+            SulgeNupp.TabIndex = 5;
+            SulgeNupp.Text = "Sulge";
+            SulgeNupp.UseVisualStyleBackColor = false;
+            SulgeNupp.Click += new EventHandler(this.SulgeNupp_Click);
+            // 
             // Form2
             // 
             ClientSize = new Size(484, 361);
+            Controls.Add(SulgeNupp);
             Controls.Add(NaitaDate);
             Controls.Add(startNupp);
             Controls.Add(jagatis);
@@ -612,7 +626,14 @@ namespace rakenduste_ul
         private Button tip2;
         private Button tip3;
         private Button tip4;
+        Button SulgeNupp;
 
+        private void SulgeNupp_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MuusikaKuulamine("Tuhi.wav");
+            timer1.Stop();
+        }
 
         private void Lihtsamvar_Click(object sender, EventArgs e)
         {
@@ -727,7 +748,7 @@ namespace rakenduste_ul
         public void MuusikaKuulamine(string song)              //функция прослушивания музыки принимающая за аргумент название файла типа "string"
         {
             string[] songs = { "doom.wav", "strange.wav", "det.wav" };
-            using (var muusika = new SoundPlayer(@"../../" + song))         //используя переменную "muusika" типа "var" которая равна созданнуму обьекту "SoundPlayer" с аргументом в виде "file" который мы передали
+            using ( var muusika = new SoundPlayer(@"../../" + song))         //используя переменную "muusika" типа "var" которая равна созданнуму обьекту "SoundPlayer" с аргументом в виде "file" который мы передали
             {
                 muusika.Play();                                 //используем встроенную функцию проигрывания файла
             }
