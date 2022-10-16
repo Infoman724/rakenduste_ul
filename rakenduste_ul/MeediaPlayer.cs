@@ -33,6 +33,7 @@ namespace rakenduste_ul
             filiNimi = new  Label();//создание "failiNimi" типа "Label"
             lblKestus = new Label();//создание "lblKestus" типа "Label"
             timer1 = new Timer(this.components);//создание таймера
+            SulgeNupp = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VideoPLayer)).BeginInit(); //3 строчки кода чтобы элемента не расползались изза бага
             this.SuspendLayout();
@@ -114,12 +115,25 @@ namespace rakenduste_ul
             // 
             timer1.Tick += new EventHandler(this.TimerEvent);
             // 
+            // SulgeNupp
+            // 
+            SulgeNupp.BackColor = Color.Red;
+            SulgeNupp.Font = new Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            SulgeNupp.Location = new System.Drawing.Point(1200, 1);
+            SulgeNupp.Name = "SulgeNupp";
+            SulgeNupp.Size = new Size(75, 23);
+            SulgeNupp.TabIndex = 5;
+            SulgeNupp.Text = "Sulge";
+            SulgeNupp.UseVisualStyleBackColor = false;
+            SulgeNupp.Click += new EventHandler(this.SulgeNupp_Click);
+            // 
             // MeediaPlayer
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1310, 558);
-            Controls.Add(lblKestus);//{
+            Controls.Add(SulgeNupp);//{
+            Controls.Add(lblKestus);
             Controls.Add(filiNimi);
             Controls.Add(Playlist);     // добавления обьектов в контейнер/ на экран
             Controls.Add(VideoPLayer);
@@ -132,6 +146,7 @@ namespace rakenduste_ul
             ((System.ComponentModel.ISupportInitialize)(this.VideoPLayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            
 
         }
 
@@ -268,6 +283,13 @@ namespace rakenduste_ul
             name.Text = "Currently Playing: " + file;
         }
 
+        private void SulgeNupp_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            timer1.Stop();
+            VideoPLayer.Ctlcontrols.stop();
+        }
+
         MenuStrip menuStrip1;
         ToolStripMenuItem ToolStripMenuEseme;
         ToolStripMenuItem loadFolderMenuEseme;
@@ -277,6 +299,7 @@ namespace rakenduste_ul
         Label filiNimi;
         Label lblKestus;
         Timer timer1;
+        Button SulgeNupp;
 
     }
 }

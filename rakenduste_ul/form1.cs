@@ -98,14 +98,14 @@ namespace rakenduste_ul
             // puhasta
             // 
 
-            this.puhasta.AutoSize = true;
-            this.puhasta.Location = new Point(505, 3);
-            this.puhasta.Name = "puhasta";
-            this.puhasta.Size = new Size(85, 26);
-            this.puhasta.TabIndex = 1;
-            this.puhasta.Text = "puhasta pilt";
-            this.puhasta.UseVisualStyleBackColor = true;
-            this.puhasta.Click += new EventHandler(this.puhasta_Click);
+            puhasta.AutoSize = true;
+            puhasta.Location = new Point(505, 3);
+            puhasta.Name = "puhasta";
+            puhasta.Size = new Size(85, 26);
+            puhasta.TabIndex = 1;
+            puhasta.Text = "puhasta pilt";
+            puhasta.UseVisualStyleBackColor = true;
+            puhasta.Click += new EventHandler(this.puhasta_Click);
 
             // 
             // taustvarv
