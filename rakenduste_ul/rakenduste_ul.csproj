@@ -111,10 +111,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="hard.wav" />
+    <Content Include="norm.wav" />
+    <Content Include="easy.wav" />
+    <Content Include="lose.wav" />
+    <Content Include="win.wav" />
     <Content Include="Tuhi.wav" />
     <Content Include="det.wav" />
     <Content Include="doom.wav" />
-    <Content Include="ReadMe.txt" />
+    <None Include="ReadMe.md" />
     <Content Include="strange.wav" />
   </ItemGroup>
   <ItemGroup>
