@@ -493,7 +493,7 @@ namespace rakenduste_ul
             {
                 MessageBox.Show($"Addres: {address} Family: {address.AddressFamily}" );
             }
-            MessageBox.Show("super nüüd ma tean su asukohta täpselt linna peale võin seda siit vaadata - https://www.reg.ru/web-tools/geoip asukoht Eestonia,Tallinn");
+            MessageBox.Show("super nüüd ma tean su asukohta täpselt linna peale Eestonia,Tallinn võin seda siit vaadata - https://www.reg.ru/web-tools/geoip");
         }
     }
 }
