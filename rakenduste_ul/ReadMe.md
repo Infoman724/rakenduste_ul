@@ -18,5 +18,8 @@ pakkudes mängu tulemusest olenevalt lihtsamat või raskemat võimalust
 //1- lisatud raskuste valikud
 //2- lisas klõpsude (katsete) arvu, mille jaoks peate leidma kõik paarid, kui teil pole aega, ilmub mesagebox ja vorm sulgub
 //3- Muusikaline saate kogu protsessi
-//4 saate lisada nähtava taimeri, mis näitab, kui palju aega on mängu lõpetamiseks jäänud
-//5-
+//4- saate lisada nähtava taimeri, mis näitab, kui palju aega on mängu lõpetamiseks jäänud
+//5- üllatus nupp
+
+--------------------------------------------------------------------------------------------------------------------
+igal vormil on vormi sulgemise nupp

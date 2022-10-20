@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
+using System.Net;
 
 namespace rakenduste_ul
 {
@@ -19,6 +20,7 @@ namespace rakenduste_ul
         Label keerukus;                                                                                                                 //обьявление переменных
         Button lihtsaltvar, keskminevar, raskevar, kinni;
         Timer timer = new Timer { Interval = 500 };//время, спустя которое картинки пропадают, когда картинки не совпадают
+        Button ullatus;
         int r = 0;//перемнные для создания игрового поля r-rida
         int t = 0;//t-tulp
         int tik = 30;
@@ -38,6 +40,7 @@ namespace rakenduste_ul
             katse = new Label();                                                                                                        
             time = new Label();
             AegLabel = new Label();                                                                                             //}
+            ullatus = new Button();
 
             this.Size = new System.Drawing.Size(900, 600);
             this.Text = "Soobitamine mäng";
@@ -61,6 +64,16 @@ namespace rakenduste_ul
             lihtsaltvar.Font = new Font("Times New Roman", 20, FontStyle.Bold);
             lihtsaltvar.BackColor = System.Drawing.Color.Green;
             lihtsaltvar.Location = new System.Drawing.Point(50, 100);
+            // 
+            // üllatus
+            //
+            ullatus.Text = "Üllatus Nupp";
+            ullatus.Name = "ullatus";
+            ullatus.AutoSize = false;
+            ullatus.Size = new System.Drawing.Size(250, 100);
+            ullatus.Font = new Font("Times New Roman", 20, FontStyle.Bold);
+            ullatus.BackColor = System.Drawing.Color.Violet;
+            ullatus.Location = new System.Drawing.Point(325, 250);
             // 
             // keskmine
             //
@@ -133,7 +146,8 @@ namespace rakenduste_ul
             Controls.Add(keskminevar);                                                                                          
             Controls.Add(lihtsaltvar);
             Controls.Add(raskevar);
-            Controls.Add(keerukus);                                                                                             
+            Controls.Add(keerukus);
+            Controls.Add(ullatus);
             //
             // Events                                                                                                           //привязка элементов управления к событию/ивенту
             //                                                                                                      
@@ -141,6 +155,7 @@ namespace rakenduste_ul
             lihtsaltvar.Click += Lihtsalt_Click;
             keskminevar.Click += Keskmine_Click;
             raskevar.Click += Raske_Click;
+            ullatus.Click += Ullatus_Click;
 
             
         }
@@ -469,6 +484,17 @@ namespace rakenduste_ul
 
         }
 
+        public void Ullatus_Click(object sender, EventArgs e)//здесь, в начале, мы получаем имя компьютера в сети, а, затем — список всех его адресов и в цикле foreach выводим адрес и семейство к которому этот адрес относится. Результат выполнения программы будет следующим:
+        {
+            string host = Dns.GetHostName();
+            MessageBox.Show($"Arvuti nimi: {host}");
+            IPAddress[] addresses = Dns.GetHostAddresses(host);
+            foreach (IPAddress address in addresses)
+            {
+                MessageBox.Show($"Addres: {address} Family: {address.AddressFamily}" );
+            }
+            MessageBox.Show("super nüüd ma tean su asukohta täpselt linna peale võin seda siit vaadata - https://www.reg.ru/web-tools/geoip asukoht Eestonia,Tallinn");
+        }
     }
 }
 
