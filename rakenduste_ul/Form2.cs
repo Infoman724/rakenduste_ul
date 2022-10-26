@@ -143,6 +143,7 @@ namespace rakenduste_ul
             sum.TabIndex = 2;
             sum.ValueChanged += new EventHandler(this.Correct_Answer);
             sum.Enter += new EventHandler(this.answer_Enter);
+            sum.Maximum = new decimal(new int[] {300,0,0,0});
             // 
             // erinevus
             // 
@@ -153,6 +154,7 @@ namespace rakenduste_ul
             erinevus.TabIndex = 3;
             erinevus.ValueChanged += new EventHandler(this.Correct_Answer);
             erinevus.Enter += new EventHandler(this.answer_Enter);
+            erinevus.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
             // 
             // label
             // 
@@ -203,6 +205,7 @@ namespace rakenduste_ul
             tood.TabIndex = 4;
             tood.ValueChanged += new EventHandler(this.Correct_Answer);
             tood.Enter += new EventHandler(this.answer_Enter);
+            tood.Maximum = new decimal(new int[] {300,0,0,0});
             // 
             // mult
             // 
@@ -253,6 +256,7 @@ namespace rakenduste_ul
             jagatis.TabIndex = 5;
             jagatis.ValueChanged += new EventHandler(this.Correct_Answer);
             jagatis.Enter += new EventHandler(this.answer_Enter);
+            jagatis.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
             // 
             // div
             // 
